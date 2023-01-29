@@ -1,3 +1,4 @@
+{# Ref: kverburg #}
 {% macro column_value_counter(column_name) %}
 
     {% set get_column_values %}

@@ -1,3 +1,4 @@
+{# Ref: kverburg #}
 {% macro grant(role) %}
 
     {% set sql %}
