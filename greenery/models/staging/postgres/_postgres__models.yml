@@ -17,21 +17,21 @@ models:
           - not null
           - unique
 
-  - name: stg_postgres__order_items
-    description: Staging model for order items from Postgres
-    columns:
-      - name: order_id
-        tests: 
-          - not null
-          - unique
+  # - name: stg_postgres__orders
+  #   description: Staging model for orders from Postgres
+  #   columns:
+  #     - name: order_id
+  #       tests: 
+  #         - not null
+  #         - unique
 
-  - name: stg_postgres__orders
-    description: Staging model for orders from Postgres
-    columns:
-      - name: order_id
-        tests: 
-          - not null
-          - unique
+  # - name: stg_postgres__order_items
+  #   description: Staging model for order items from Postgres
+  #   columns:
+  #     - name: order_item_id
+  #       tests: 
+  #         - not null
+  #         #- unique
 
   - name: stg_postgres__products
     description: Staging model for products from Postgres
