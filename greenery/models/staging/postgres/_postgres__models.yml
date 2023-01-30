@@ -2,12 +2,12 @@
 version: 2
 
 models:
-  - name: stg_postgres_orders
+  - name: stg_postgres__orders
     description: Individual order info 
     columns:
       - name: order_guid
       - name: user_guid
-      - name: promo_desc
+      - name: promo_description
       - name: address_guid
       - name: created_at_utc
       - name: order_cost
@@ -23,14 +23,15 @@ models:
           - accepted_values:
               values: ['shipped', 'delivered','preparing']
 
-  - name: stg_postgres_order_items
+  - name: stg_postgres__order_items
     description: Items in a particular order info
     columns:
+      - name: order_item_id
       - name: order_guid
       - name: product_guid
       - name: quantity
 
-  - name: stg_postgres_addresses
+  - name: stg_postgres__addresses
     description: Addresses of users 
     columns:
       - name: address_guid
@@ -39,7 +40,7 @@ models:
       - name: state
       - name: country
 
-  - name: stg_postgres_events
+  - name: stg_postgres__events
     description: Individual events per user session
     columns:
       - name: event_guid
@@ -51,22 +52,22 @@ models:
       - name: order_guid
       - name: product_guid
 
-  - name: stg_postgres_products
+  - name: stg_postgres__products
     description: Individual product info
     columns:
       - name: product_guid
       - name: product_name
-      - name: product_price
-      - name: product_inventory
+      - name: unit_price
+      - name: stock
 
-  - name: stg_postgres_promos
+  - name: stg_postgres__promos
     description: Promotion info
     columns:
-      - name: promo_type
+      - name: promo_id
       - name: promo_discount
       - name: promo_status
 
-  - name: stg_postgres_users
+  - name: stg_postgres__users
     description: Individual user info
     columns:
       - name: user_guid

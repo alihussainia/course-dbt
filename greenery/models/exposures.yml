@@ -1,0 +1,14 @@
+version: 2
+
+exposures:  
+  - name: greenery_product_funnel_workbook
+    description: >
+      Models that are critical to our product funnel Workbook
+    type: notebook
+    url: https://app.sigmacomputing.com/corise-dbt/workbook/workbook-2UOUhwew2aCT3lyPLh65q?:draftId=f902186f-0088-4c1f-b98c-b1c7df96fe34
+    maturity: high
+    owner:
+      name: Muhammad Ali
+      email: malirashid1994@gmail.com
+    depends_on:
+      - ref('int_session_events_agg')
